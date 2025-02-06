@@ -1,4 +1,5 @@
-# 📺 **NBC Data Analysis** 🎥📊
+# 🏀✨ **NBA Data Analysis: Uncovering the Game's Secrets** 📊🔥
+
 
 ![NBC](https://via.placeholder.com/800x200.png?text=NBC+Data+Analysis)
 
