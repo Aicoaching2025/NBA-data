@@ -1,76 +1,100 @@
-# 🏀✨ **NBA Data Analysis: Uncovering the Game's Secrets** 📊🔥
+Here’s a **README.md** file with **clear captions, sections, and visuals** for your project:
 
+---
 
-![NBC](https://via.placeholder.com/800x200.png?text=NBC+Data+Analysis)
+# 🏀 **Knicks vs. Nets: A Statistical Comparison (2010 & 2014)**
+### 📊 **Analyzing & Visualizing the Scoring Differences Between the Knicks & Nets Over Two Seasons**
+
+![Basketball Banner](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/640px-Basketball.png)
+
+---
 
 ## **📌 Overview**
-This project explores the **NBC dataset**, analyzing key trends, programming performance, and audience engagement. The goal is to uncover insights into viewership patterns, top-performing shows, and factors affecting ratings. 📈🎬
+This project compares the **average points per game** between the **New York Knicks** and **Brooklyn Nets** during the **2010** and **2014** NBA seasons.  
+We analyze scoring trends, team consistency, and point distributions using **Python, Matplotlib, and Seaborn**.
 
-## **🎯 Goals**
-✅ Investigate **ratings trends** across different shows.  
-✅ Analyze **audience engagement** over time.  
-✅ Compare **programming success** using visual analytics.  
-✅ Identify **patterns in viewership demographics**.  
-✅ Create **stunning data visualizations** to showcase insights.  
+---
 
-## **📂 Dataset**
-The dataset includes:
-📺 **show_id** – Unique ID for each show.  
-📅 **year** – The year the show aired.  
-🎭 **genre** – The genre of the show.  
-👥 **audience_size** – The number of viewers.  
-⭐ **ratings** – Show ratings on a scale.  
-📈 **trend_score** – Trend analysis score for engagement.  
+## **📂 Project Files**
+| 📄 **File** | 📌 **Description** |
+|------------|-------------------|
+| `knicks_nets_analysis.ipynb` | Jupyter Notebook with all Python code and visualizations. |
+| `jeopardy.csv` | Dataset file (if applicable). |
+| `README.md` | This project documentation. |
 
-## **🔎 Project Steps**
-### **1️⃣ Data Exploration**
-- 🔍 Inspect data using `.head()`.
-- 🏗️ Identify missing values and clean the dataset.
-
-### **2️⃣ Show Ratings Analysis**
-- ⭐ Compare **average ratings** across different genres.
-- 🎭 Identify **top-rated shows** over the years.
-
-### **3️⃣ Audience Engagement Trends**
-- 👥 Analyze **viewership growth or decline** over time.
-- 📊 Use **line charts & bar graphs** to visualize trends.
-
-### **4️⃣ Predicting Show Success**
-📊 Calculate:
-- 🎯 **Correlation** between audience size and ratings.
-- 🔮 **Forecasting model** for predicting future hit shows.
-- 📉 **Statistical tests** to analyze viewership trends.
-
-### **5️⃣ Advanced Visualizations**
-🎨 Create:
-- 📊 **Heatmaps** of ratings vs. audience size.
-- 📈 **Trend analysis line charts**.
-- 🎭 **Word clouds** of common genres.
-- 🏆 **Top 10 shows bar charts**.
-- 📉 **Scatter plots for engagement vs. ratings**.
+---
 
 ## **📊 Key Findings**
-📌 **Popular genres**: Some genres consistently outperform others in ratings.  
-📏 **Audience size matters**: Shows with higher audience size tend to have better ratings.  
-💡 **Emerging trends**: Certain genres have been gaining popularity in recent years.  
+✔ **The difference in average points per game** decreased between 2010 and 2014.  
+✔ **Knicks were more consistent**, while the **Nets showed more variation in scoring**.  
+✔ **Game point distributions** show different trends between the two teams.
 
-## **⚙️ Installation & Usage**
-1️⃣ Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/nbc-data-analysis.git
-   cd nbc-data-analysis
-   ```
-2️⃣ Install dependencies:
-   ```sh
-   pip install pandas numpy matplotlib seaborn scipy
-   ```
-3️⃣ Run the analysis:
-   ```python
-   python nbc_analysis.py
+---
+
+## **📈 Visualizations**
+### **1️⃣ Distribution of Points Per Game (Histogram)**
+This histogram shows how often each team scored within certain point ranges.
+
+📌 **What This Reveals:**  
+- The **Knicks had more consistent scoring**.  
+- The **Nets had greater variations in their points per game**.  
+
+```python
+sns.histplot(knicks_pts_10, bins=10, kde=True, color="blue", label="Knicks 2010", alpha=0.6)
+sns.histplot(nets_pts_10, bins=10, kde=True, color="lightgreen", label="Nets 2010", alpha=0.6)
+```
+
+---
+
+### **2️⃣ Boxplot: Spread of Points Per Game**
+A boxplot displays **the distribution, median, and outliers** for each team’s points per game.
+
+📌 **What This Reveals:**  
+- The **Knicks had a tighter scoring range**, meaning they were **more consistent**.  
+- The **Nets had more outliers**, indicating **high variation in performance**.  
+
+```python
+sns.boxplot(data=[knicks_pts_10, nets_pts_10, knicks_pts_14, nets_pts_14], 
+            palette=["blue", "lightgreen", "darkblue", "seagreen"])
+```
+
+---
+
+### **3️⃣ Side-by-Side Bar Chart: Comparing 2010 & 2014**
+This bar chart compares **the average points per game** for the Knicks & Nets over the two seasons.
+
+📌 **What This Reveals:**  
+- **Nets improved slightly from 2010 to 2014**.  
+- **Knicks remained relatively stable** in their scoring.  
+
+```python
+plt.bar(x - bar_width/2, knicks_averages, width=bar_width, color='blue', label='Knicks')
+plt.bar(x + bar_width/2, nets_averages, width=bar_width, color='lightgreen', label='Nets')
+```
+
+---
+
+## **📌 How to Run the Project**
+1️⃣ **Clone the Repository**:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/knicks-nets-analysis.git
+   cd knicks-nets-analysis
    ```
 
-## **👨‍💻 Author**
-- **Your Name**  
+2️⃣ **Install Dependencies**:
+   ```bash
+   pip install matplotlib seaborn numpy pandas
+   ```
+
+3️⃣ **Run the Jupyter Notebook**:
+   ```bash
+   jupyter notebook
+   ```
+
+
+## **📬 Contact**
+For any questions or contributions, feel free to reach out! 🚀  
+
 - 🔗 **LinkedIn**: [Your LinkedIn](https://www.linkedin.com/in/candace215/)  
 - 🐙 **GitHub**: [Your GitHub](https://github.com/aicoaching2025/)  
 
